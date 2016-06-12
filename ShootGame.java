@@ -280,14 +280,14 @@ public class ShootGame extends JPanel{
 	
 	public static void main(String[] args) {
 		
-		JFrame frame = new JFrame("Fly"); //窗口
- 		ShootGame game = new ShootGame(); //面板
- 		frame.add(game); //将面板添加到窗口中
- 		frame.setSize(WIDTH, HEIGHT); //设置窗口大小
- 		frame.setAlwaysOnTop(true); //设置一直居上
- 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //设置默认关闭操作--关闭窗口时退出程序
- 		frame.setLocationRelativeTo(null); //设置相对位置为null，即:居中
- 		frame.setVisible(true); //1.设置窗口可见  2.尽快调用paint()方法
+		JFrame frame = new JFrame("Fly"); //window
+ 		ShootGame game = new ShootGame(); //panel
+ 		frame.add(game); //add panel to our frame
+ 		frame.setSize(WIDTH, HEIGHT); //adjust window size
+ 		frame.setAlwaysOnTop(true); //always on top
+ 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //set that when the window is closed, the program terminates
+ 		frame.setLocationRelativeTo(null); //set relative position to null, that is, always in the center
+ 		frame.setVisible(true); //1. set visibility of the window to true 2.call the paint() function
  		
  		game.action();
 	}

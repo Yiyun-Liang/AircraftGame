@@ -2,22 +2,22 @@ package com.tarena.shoot;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 public class Hero extends FlyingObject{
-	private int life;  //命
-	private int doubleFire; //火力值
-	private BufferedImage[] images; //图片数组
-	private int index; //控制切换的频率
+	private int life;  
+	private int doubleFire; 
+	private BufferedImage[] images; //array of images
+	private int index; //control the frequency
 	
-	/** 构造方法 */
+	/** constructor */
 	public Hero(){
-		image = ShootGame.hero0; //图片
-		width = image.getWidth(); //宽
-		height = image.getHeight(); //高
-		x = 150; //x:固定的150
-		y = 400; //y:固定的400
-		life = 3; //3条命
-		doubleFire = 0; //火力值0,代表单倍火力
-		images = new BufferedImage[]{ShootGame.hero0,ShootGame.hero1}; //两张图片
-		index = 0; //协助切换图片
+		image = ShootGame.hero0; //images
+		width = image.getWidth(); //width
+		height = image.getHeight(); //height
+		x = 150; //x:fix to 150
+		y = 400; //y:fix to 400
+		life = 3; //initialize life to 3
+		doubleFire = 0; //when fire is 0, it means 1x fire
+		images = new BufferedImage[]{ShootGame.hero0,ShootGame.hero1}; //load two of the images
+		index = 0; //changing betweent the two images
 	}
 	
 	public void step(){
