@@ -16,18 +16,18 @@ import java.awt.Font;
 import java.awt.Graphics;
 public class ShootGame extends JPanel{
 	
-	public static final int WIDTH = 400;  //窗口宽
-	public static final int HEIGHT = 654; //窗口高
+	public static final int WIDTH = 400;  //width of the window
+	public static final int HEIGHT = 654; //height of the window
 	
-	public static BufferedImage background; //背景图
-	public static BufferedImage start; //启动图
-	public static BufferedImage pause; //暂停图
-	public static BufferedImage gameover; //游戏结束图
-	public static BufferedImage airplane; //敌机图
-	public static BufferedImage bee; //小蜜蜂图
-	public static BufferedImage bullet; //子弹图
-	public static BufferedImage hero0; //英雄机图1
-	public static BufferedImage hero1; //英雄机图2
+	public static BufferedImage background; //background image
+	public static BufferedImage start; //starting image
+	public static BufferedImage pause; //pausing image
+	public static BufferedImage gameover; //gameover image
+	public static BufferedImage airplane; //image of aircrafts
+	public static BufferedImage bee; //image of bees
+	public static BufferedImage bullet; //image of bullets
+	public static BufferedImage hero0; //image of hero0
+	public static BufferedImage hero1; //image of hero1
 	
 	public static final int START = 0;
 	public static final int RUNNING = 1;
@@ -35,21 +35,21 @@ public class ShootGame extends JPanel{
 	public static final int GAME_OVER = 3;
 	private int state = 0;
 	
-	private Hero hero = new Hero();  //英雄机对象
-	private FlyingObject[] flyings = {}; //敌人(敌机+小蜜蜂)数组
-	private Bullet[] bullets = {}; //子弹数组
+	private Hero hero = new Hero();  //hero array
+	private FlyingObject[] flyings = {}; //enemys array(bees and enemy aircrafts)
+	private Bullet[] bullets = {}; //bullet array
 	
-	static{  //初始化静态资源
+	static{  //initialize static resources
 		try{
-			background = ImageIO.read(ShootGame.class.getResource("background.png"));
-			start = ImageIO.read(ShootGame.class.getResource("start.png"));
-			pause = ImageIO.read(ShootGame.class.getResource("pause.png"));
-			gameover = ImageIO.read(ShootGame.class.getResource("gameover.png"));
-			airplane = ImageIO.read(ShootGame.class.getResource("airplane.png"));
-			bee = ImageIO.read(ShootGame.class.getResource("bee.png"));
-			bullet = ImageIO.read(ShootGame.class.getResource("bullet.png"));
-			hero0 = ImageIO.read(ShootGame.class.getResource("hero0.png"));
-			hero1 = ImageIO.read(ShootGame.class.getResource("hero1.png"));
+			background = ImageIO.read(ShootGame.class.getResource("images/background.png"));
+			start = ImageIO.read(ShootGame.class.getResource("images/start.png"));
+			pause = ImageIO.read(ShootGame.class.getResource("images/pause.png"));
+			gameover = ImageIO.read(ShootGame.class.getResource("images/gameover.png"));
+			airplane = ImageIO.read(ShootGame.class.getResource("images/airplane.png"));
+			bee = ImageIO.read(ShootGame.class.getResource("images/bee.png"));
+			bullet = ImageIO.read(ShootGame.class.getResource("images/bullet.png"));
+			hero0 = ImageIO.read(ShootGame.class.getResource("images/hero0.png"));
+			hero1 = ImageIO.read(ShootGame.class.getResource("images/hero1.png"));
 		}catch(Exception e){
 			e.printStackTrace();
 		}
